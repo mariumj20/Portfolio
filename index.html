@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>Marium Jahan</span><br>From Bangladesh</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/IMG3.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"> About Me</h1>
+                    <p>Hello! I am marium and a software developer and graphic designer.With one year of experience,i've had the pleasure of working on a variety of projects.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links"onclick="opentab('experience',event)" >Experience</p>
+                        <p class="tab-links"onclick="opentab('education',event)" >Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
+                            <li><span>Web Development</span><br>Designing Web/App interfaces</li>
+                            <li><span>App Development</span><br>Bulding Android/i0S apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2024</span><br>UI/UX Design Training</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2017</span><br>SSC from Aruail M/L high school</li>
+                            <li><span>2019</span><br>HSC from Bangladesh school abd collage</li>
+                            <li><span>2024</span><br>Bsc from Sheikh Hasina University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>web design</h2>
+                    <p>Full-stack web development including front-end and back-end solutions. Expertise in HTML, CSS, JavaScript, and popular frameworks like React and Node. </p>
+                </div>
+                <div>
+                    <h2>UI/UX design</h2>
+                    <p>Full-stack web development including front-end and back-end solutions. Expertise in HTML, CSS, JavaScript, and popular frameworks like React and Node. </p>
+                </div>
+                <div>
+                    <h2>App design</h2>
+                    <p> Full-stack web development including front-end and back-end solutions. Expertise in HTML, CSS, JavaScript, and popular frameworks like React and Node.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My work</h1>
+        <p> Full-stack web development including front-end and back-end solutions. Expertise in HTML, CSS, JavaScript, and popular frameworks like React and Node.</p>
+    </div>
+</div>
+<section class="reviews">
+    <div class="container">
+        <h1 class="section-heading"><span>My</span>Gallery</h1>
+        <p>"step into the gallery,where every stroke of the brush whispers a table.</p>
+        <div class="slider">
+            <div class="slide">
+                <img src="images/IMG.jpg"alt="">
+            </div>
+            <div class="slide">
+                <img src="images/IMG2.jpg"alt="">
+            </div>
+            <div class="slide">
+                <img src="images/IMG3.jpeg"alt="">
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(tabname, event){
+            for(var tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(var tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    
+</body>
+</html> 
